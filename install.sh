@@ -12,7 +12,7 @@ sudo chmod +x /usr/local/bin/ps1boot.sh
 # copy systemd template
 sudo cp ps1boot@.service /etc/systemd/system/
 
-# enable service with the boot video path
-sudo systemctl enable ps1boot@/usr/share/ps1boot/boot.mp4.service
+# enable service with the boot video path (no .service at the end)
+sudo systemctl enable "ps1boot@/usr/share/ps1boot/boot.mp4"
 
-echo "ps1boot vid installed reboot to see it in action!"
+echo "ps1boot vid installed! Reboot to see it in action!"
