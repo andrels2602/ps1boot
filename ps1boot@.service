@@ -1,0 +1,14 @@
+[Unit]
+Description=PSboot (%i)
+After=local-fs.target network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/ps1boot.sh %i
+StandardInput=tty
+StandardOutput=tty
+TTYPath=/dev/tty1
+RemainAfterExit=yes
+
+[Install]
+WantedBy=graphical.target
