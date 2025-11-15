@@ -1,10 +1,10 @@
 [Unit]
-Description=PSboot (%i)
+Description=PS1 Boot Video
 After=local-fs.target network.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/ps1boot.sh %i
+ExecStart=/usr/local/bin/ps1boot.sh
 StandardInput=tty
 StandardOutput=tty
 TTYPath=/dev/tty1
