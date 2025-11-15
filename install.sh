@@ -9,8 +9,11 @@ sudo cp boot.mp4 /usr/share/ps1boot/boot.mp4
 sudo cp ps1boot.sh /usr/local/bin/
 sudo chmod +x /usr/local/bin/ps1boot.sh
 
-# copy service
+# copy fixed service
 sudo cp ps1boot.service /etc/systemd/system/
+
+# reload systemd daemons
+sudo systemctl daemon-reload
 
 # enable service
 sudo systemctl enable ps1boot.service
